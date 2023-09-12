@@ -10,34 +10,27 @@ function Counter({ number, diff, onIncrease, onDecrease, onSetDiff }) {
   };
   const isInputValid = !isNaN(inputValue) && inputValue > 0;
   return (
-    <Container>
-      <Wrap>
-        <Title>Redux 공부 : 카운터</Title>
+    <Wrap>
+      <Title>Redux 공부 : 카운터</Title>
 
-        <h2>count : {number}</h2>
-        <ItemBox>
-          <Btn onClick={onDecrease} disabled={!isInputValid}>
-            -
-          </Btn>
-          <Input type="number" value={diff} onChange={onChange} />
-          <Btn onClick={onIncrease} disabled={!isInputValid}>
-            +
-          </Btn>
-        </ItemBox>
-      </Wrap>
-    </Container>
+      <h2>count : {number}</h2>
+      <ItemBox>
+        <Btn onClick={onDecrease} disabled={!isInputValid}>
+          -
+        </Btn>
+        <Input type="number" value={diff} onChange={onChange} />
+        <Btn onClick={onIncrease} disabled={!isInputValid}>
+          +
+        </Btn>
+      </ItemBox>
+    </Wrap>
   );
 }
 
 export default Counter;
 
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
 const Wrap = styled.div`
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;

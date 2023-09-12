@@ -1,10 +1,10 @@
 import "./App.css";
-import CounterContainer from "./containers/CounterContainer";
+import MainPage from "./pages/MainPage";
 
 function App() {
   return (
     <div className="App">
-      <CounterContainer />
+      <MainPage />
     </div>
   );
 }
