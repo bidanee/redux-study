@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { styled } from "styled-components";
 import CounterContainer from "../containers/CounterContainer";
-import ToDoList from "../components/ToDoList";
+import TodosContainer from "../containers/TodosContainer";
 
 const MainPage = () => {
   const [category, setCategory] = useState("count");
@@ -12,7 +12,9 @@ const MainPage = () => {
         <Btn onClick={() => setCategory("count")}>COUNT</Btn>
         <Btn onClick={() => setCategory("todoList")}>TO-Do LIST</Btn>
       </Container>
-      <Item>{category === "count" ? <CounterContainer /> : <ToDoList />}</Item>
+      <Item>
+        {category === "count" ? <CounterContainer /> : <TodosContainer />}
+      </Item>
     </Wrapper>
   );
 };
