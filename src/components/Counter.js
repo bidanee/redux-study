@@ -74,7 +74,7 @@ const Input = styled.input`
     margin: 0;
   }
   width: 100px;
-  height: 30px;
+  height: 36px;
   border: 2px solid #6aa6bf;
   font-size: 20px;
   text-align: center;

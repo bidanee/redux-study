@@ -9,10 +9,8 @@ function CounterContainer() {
     diff : state.diff,
   }))
   */
-  const { number, diff } = useSelector((state) => ({
-    number: state.counter.number,
-    diff: state.counter.diff,
-  }));
+  const number = useSelector((state) => state.counter.number);
+  const diff = useSelector((state) => state.counter.diff);
 
   const dispatch = useDispatch();
   const onIncrease = () => dispatch(increase());
